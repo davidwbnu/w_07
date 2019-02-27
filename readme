@@ -1,0 +1,34 @@
+这是一个使用django搭建网站的案例，需要在本地运行。以下为操作步骤:
+1、搭建python虚拟环境，安装django
+环境为：python3.7 django2.1 步骤和方法略，请参考其他攻略，新建的python虚拟环境名称为env_w
+2、进入虚拟环境
+(base) E:\project\fwa>conda activate env_w          #任何目录下进入虚拟环境都可以，其中env_w为虚拟环境名
+3、新建django项目
+(env_w) E:\project\fwa>django-admin startproject w_02       # w_02为django项目名
+4、新建应用
+(env_w) E:\project\fwa>cd w_02      # 进入新建django项目
+(env_w) E:\project\fwa\w_02>python manage.py startapp frontend      # 新建应用，用来处理前端页面的调用
+5、新建所需文件及文件夹
+(env_w) E:\project\fwa\w_02>md templates\pages      # 新建文件夹templates及其子文件夹pages
+(env_w) E:\project\fwa\w_02>type nul>templates\pages\index.html     # 在文件夹templates\pages下，新建文件index.html
+(env_w) E:\project\fwa\w_02>md frontend\static\css      # 在文件夹frontend下，新建文件夹templates及其子文件夹static。注意，django要求这里的文件夹名称必须为static
+(env_w) E:\project\fwa\w_02>type nul>frontend\static\css\main.css       # 在文件夹frontend\static\css下，新建文件main.css。此外还需要从互联网下载bootstrap.min.css文件，放到该文件夹下。
+(env_w) E:\project\fwa\w_02>md common_static        # 如果settings中，设置了STATICFILES_DIRS，需要新建该文件夹，并且将静态文件放到该文件夹内；如果不想用STATICFILES_DIRS，都放在frontend里的static中也可以。
+(env_w) E:\project\fwa\w_02>type nul>frontend\urls.py       # 在文件夹frontend中新建urls.py
+6、修改及新增文件内容
+参考w_02项目代码维护文件内容，需要修改及新增内容的文件包括：
+w_02/w_02/settings.py
+w_02/frontend/static/css/bootstrap.min.css
+w_02/frontend/static/css/main.css
+w_02/templates/pages/index.html
+w_02/frontend/views.py
+w_02/frontend/urls.py
+w_02/w_02/urls.py
+7、数据迁移
+(env_w) E:\project\fwa\w_02>python manage.py migrate
+8、收集静态文件
+(env_w) E:\project\fwa\w_02>python manage.py collectstatic
+9、创建超级用户
+(env_w) E:\project\fwa\w_02>python manage.py createsuperuser
+10、启动项目
+(env_w) E:\project\fwa\w_02>python manage.py runserver
