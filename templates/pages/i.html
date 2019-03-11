@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+{#    <link rel="stylesheet" href="{% static 'Frontend/css/bootstrap.min.css' %}">#}
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Frontend/css/main.css' %}">
+
+
+    <title>{{ title }}</title>
+</head>
+<body>
+<div class="navbar navbar-expand-sm bg-dark"></div>
+<h1 style="text-align: center">welcome to {{ title }} !</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+        </div>
+        <div class="col-md-7">
+            Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+        </div>
+        <div class="col-md-3">
+            Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.14.7/esm/popper.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

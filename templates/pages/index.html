@@ -5,24 +5,228 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'Frontend/css/index.css' %}">
+
+
 </head>
 <body>
-<div class="navbar navbar-expand-sm bg-dark"></div>
-<h1 style="text-align: center">welcome to {{ title }} !</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-md-2">
-            Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+    <header class="navbar navbar-expand-md navbar-light bg-white fixed-top" id="headerNavbar">
+        <a href="#" class="navbar-brand" style="color:#009ffd;font-size: 2rem"><h1>FlyWing</h1></a>
+
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <!-- 方框里面三条线 -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="GohomePage">首页</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="GoaboutUs">关于我们</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">服务内容</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" id="GS01">航材保障</a>
+                        <a href="#" class="dropdown-item" id="GS02">进口代理</a>
+                        <a href="#" class="dropdown-item" id="GS03">出口代理</a>
+                        <a href="#" class="dropdown-item" id="GS04">报关报检</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="GocontactUs">联系我们</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-7">
-            Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
-        </div>
-        <div class="col-md-3">
-            Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
-        </div>
-    </div>
-</div>
+    </header>
+
+    <section class="main">
+        <section id="homePage" class="homePage" >
+            <div class="container">
+                <div class="row">
+                    <div  class="col-md-6">
+                        <img src="{% static 'Frontend/image/hy01.jpg' %}" alt="" style="text-align:center;">
+                    </div>
+                    <div class="col-md-6" style="text-align:center;">
+                        <p>飞翼航空<br>值得信赖的国际贸易服务专家！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="serv01" class="service container-fluid">
+                <div class="container">
+                    <p  class="title">航材保障</p>
+                    <div class="row" style="text-align:center;">
+                        <div class="col-sm-3">
+                            <i class="fa fa-plane fa-4x" style="color:#009ffd;padding-top: 10vh;"></i>
+                            <p><strong>航材AOG保障</strong></p>
+                        </div>
+                        <div  class="col-sm-3">
+                            <i class="fa fa-spinner fa-4x" style="color:#009ffd;padding-top: 10vh;"></i>
+                            <p><strong>索赔航材免税交换</strong></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-wrench fa-4x" style="color:#009ffd;padding-top: 10vh;"></i>
+                            <p><strong>小时包修业务</strong></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-exchange fa-4x" style="color:#009ffd;padding-top: 10vh;"></i>
+                            <p><strong>飞机发动机和APU进出口</strong></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-stethoscope fa-4x" style="color:#009ffd;padding-top: 10vh;"></i>
+                            <p><strong>飞机定检业务</strong></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fa fa-key fa-4x" style="color:#009ffd;padding-top: 10vh;"></i>
+                            <p><strong>飞机引进业务</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="serv02" class="container-fluid service">
+                <div class="container">
+                    <p class="title">进口代理</p>
+                    <div class="row">
+                        <div class="col-md-4" style="text-align:center;">
+                            <img src="{% static 'Frontend/image/import.png' %}" alt="" >
+                        </div>
+                        <div class="col-md-8">
+                            <strong>主要业务流程：</strong>
+                            <p>1、客户与外商签订贸易合同后，飞翼与客户（委托方）签订《进口代理协议》。</p>
+                            <p>2、飞翼根据客户与外商签订的贸易合同，审核进口单据。</p>
+                            <p>3、客户根据与外商确定的付款方式，安排打款(货款、进口保证金、进口关税、进口增值税、代理费)，打款时间根据具体业务情况而定。</p>
+                            <p>4、飞翼安排运输及投保（如果需要）。</p>
+                            <p style="text-indent:2em;">- 在CIF条款下，飞翼负责协调外商准时交货，货物发出后，及时索要进口提单。</p>
+                            <p style="text-indent:2em;">- 在FOB及EXW条款下，飞翼负责协调外商按时备货，通知当地货运商提货，办理国外订舱、投保，然后运输至国内港口。</p>
+                            <p>5、货到国内港口后，飞翼整理全套进口单据，并安排进口报关报检操作事宜。</p>
+                            <p>6、货物放行后，飞翼安排派送。</p>
+                            <p>7、飞翼向客户提供对帐单及各项票据。</p><br>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="serv03" class="container-fluid service">
+                <div class="container">
+                    <p class="title">出口代理</p>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <strong>主要业务流程：</strong>
+                            <p>1、外商与客户（委托方或出口商）确认好报价，签订合同及确定各项条款后，客户把订单和报价单提供给飞翼，飞翼与客户签订《出口代理协议》。</p>
+                            <p>2、飞翼根据客户与外商签订的贸易合同，审核出口单据。</p>
+                            <p>3、外商根据与客户确定的付款方式，安排打款(货款、运费等)，打款时间根据具体业务情况而定。</p>
+                            <p>4、飞翼安排出口报关报检操作事宜。</p>
+                            <p>5、飞翼安排运输及投保（如果需要）。</p>
+                            <p style="text-indent:2em;">在CIF条款下，飞翼负责协调客户准时交货，安排货物装船、并把货物运输至外商指定境外港口，联系运输公司签发提单。</p>
+                            <p style="text-indent:2em;">在FOB及EXW条款下，飞翼负责协调客户按时备货，通知外商到指定港口仓库或厂房提货。</p>
+                            <p>6、货物起运后，飞翼整理全套提货单据(箱单、发票、提单、原产地证)，并出具账单，提供给客户。</p>
+                            <p>7、客户将全套出口单据寄给外商，以便外商安排提货事宜;</p>
+                            <p>8、海关退回出口单据后，飞翼安排后续核销退税事宜。</p><br>
+                            <strong>备注事项：</strong>
+                            <p style="text-indent:2em;">-如果客户不具备出口资质或者出于业务操作便利性等因素考虑，也可以委托飞翼与外商签订外贸合同，代理出口。</p>
+                            <p style="text-indent:2em;">-飞翼可以代办原产地证书。</p>
+                        </div>
+                        <div class="col-md-4" style="text-align:center;">
+                            <img src="{% static 'Frontend/image/import.png' %}" alt="" >
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="serv04" class="container-fluid service">
+                <div class="container">
+                    <p class="title">报关报检</p>
+                    <div class="row">
+                        <div class="col-md-4" style="text-align:center;">
+                            <img src="{% static 'Frontend/image/export.png' %}" alt="" >
+                        </div>
+                        <div class="col-md-8">
+                            <strong>主要业务流程：</strong>
+                            <p>1、飞翼与客户签订《进出口报关代理协议》</p>
+                            <p>2、客户根据业务要求，向飞翼业务员提供合同、发票、箱单等单证。</p>
+                            <p>3、飞翼与海关、运输公司沟通进行进出口报关操作，并与客户及时沟通报关进展。</p>
+                            <p>4、飞翼完成进出口报关操作，向客户提供报关单据，并提供对账单及发票。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section id="aboutUs" class="aboutUs">
+            <div class="container">
+                <p class="title" style="text-align:center;">北京飞翼航空器材有限公司</p>
+                <p>专业从事进出口代理、报关以及物流仓储服务的一站式国际货运代理公司，涉及的产品包括航空器材、电力设备、电子器件、化工用品、医疗器械和食品饮料等。拥有从事国际贸易和国际国内运输多年工作经验的专业人才，熟悉进出口流程中的各个环节。</p>
+                <div class="row c" style="padding-top: 5vh;text-align:center">
+                    <div class="col-sm-4">
+                        <img src="{% static 'Frontend/image/mission.png' %}" alt="">
+                        <p><b>使命：</b>提供卓越的国际贸易服务。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="{% static 'Frontend/image/vision.png' %}" alt="">
+                        <p><b>愿景：</b>建设最受客户尊敬、最能调动员工奋斗激情的国际贸易服务平台。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="{% static 'Frontend/image/culture.png' %}" alt="">
+                        <p><b>文化：</b>诚信、奋斗、高效、尽责</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactUs" class="contactUs">
+                <div class="container">
+                    <h3>CONTACT US</h3><br>
+                    <div class="row">
+                        <div class="col-sm-8" style="">
+                            <br><br>
+                            <p><b>联系人：</b>市场部</p>
+                            <p><b>联系电话：</b>13651246389</p>
+                            <p><b>邮箱：</b>sales@flywingaviation.cn</p>
+                            <p><b>地址：</b>北京市朝阳区东坝路顺远街1-2-807</p>
+                        </div>
+                        <div class="col-sm-4" style="text-align:center;">
+                            <img src="{% static 'Frontend/image/2d.jpg' %}" alt="" style="width:50%;height:auto;">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">北京飞翼航空器材有限公司</div>
+                </div>
+            </div>
+    </footer>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.14.7/esm/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'Frontend/js/index.js' %}"></script>
 </body>
 </html>

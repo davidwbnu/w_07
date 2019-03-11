@@ -1,0 +1,102 @@
+
+/*******初始化标签**************/
+body,div,ul,li,p,h1,h2,h3,h4{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.box{
+    width:20vw;
+    height:40vh;
+    background-color: lemonchiffon;
+    /*margin: 0 auto;*/
+}
+/***************navbar***************/
+
+#headerNavbar{
+    opacity: 0.9;
+    border-bottom-style:solid;
+    border-width: medium;
+    border-color: #fafafa;
+}
+
+
+
+/***********t**********************/
+
+
+
+.homePage{
+	background-color: #FFF;
+    padding-top:25vh;
+    padding-bottom:25vh;
+
+}
+
+
+.homePage p{
+    font-size: 2rem;
+    padding-top:15vh;
+    color: #009ffd;
+
+}
+
+
+
+/*service*/
+.service{
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+}
+
+#serv01, #serv04{
+    background-color:#fafafa;
+}
+
+
+
+
+/*aboutUs*/
+.aboutUs{
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+
+}
+
+
+.c div{
+
+    margin: 0 auto;
+}
+
+/*contactUs*/
+.contactUs{
+    background-color: #fafafa;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
+
+.footer{
+    text-align:center;
+    background-color: #424242;
+    height:20vh;
+}
+
+
+
+
+
+.title{
+
+    padding-bottom: 2vh;
+    font-size:2rem;
+}
+/***********底部*******************/
+
